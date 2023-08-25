@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ballController : MonoBehaviour
 {
+    // test
     //private SceneController managerBall;
     public BarController gameBar;
     private bool isStartGame;
