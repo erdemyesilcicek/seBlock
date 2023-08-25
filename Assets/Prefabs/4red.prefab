@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3827677991149868257}
   - component: {fileID: 409107926049657079}
   - component: {fileID: 7087464015427727898}
-  - component: {fileID: 4670793696572621206}
   - component: {fileID: -965115930817032896}
   m_Layer: 0
   m_Name: 4red
@@ -31,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.071, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -145,30 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad4d79063dff37429eaaeb840a3294a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValueText: {fileID: 851396857854051258, guid: e153a5f95531d3a4d91551cf66ce285f, type: 3}
   effect: {fileID: 2713619128628751107, guid: 1a3c3f72cf9ae5643aa42bd16dc1ff67, type: 3}
   hitNumber: 0
   blockViews:
   - {fileID: 705573044, guid: cf44504ae309b8648947faa99973016f, type: 3}
-  - {fileID: 552631841, guid: cf44504ae309b8648947faa99973016f, type: 3}
-  - {fileID: -171534446, guid: cf44504ae309b8648947faa99973016f, type: 3}
---- !u!114 &4670793696572621206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290270641656003042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad4d79063dff37429eaaeb840a3294a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValueText: {fileID: 0}
-  effect: {fileID: 0}
-  hitNumber: 0
-  blockViews:
-  - {fileID: 552631841, guid: cf44504ae309b8648947faa99973016f, type: 3}
   - {fileID: 552631841, guid: cf44504ae309b8648947faa99973016f, type: 3}
   - {fileID: -171534446, guid: cf44504ae309b8648947faa99973016f, type: 3}
 --- !u!82 &-965115930817032896

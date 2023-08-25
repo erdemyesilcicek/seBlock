@@ -17,9 +17,11 @@ public class Blocks : MonoBehaviour
         if (isBroke)
         {
             brokeBlockNumber++;
+            Debug.Log(brokeBlockNumber);
         }
         hitNumber = 0;
         sceneManager = GameObject.FindObjectOfType<SceneController>();
+        Debug.Log(brokeBlockNumber);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,9 +38,10 @@ public class Blocks : MonoBehaviour
         hitNumber++;
         if (hitNumber >= health)
         {
-            brokeBlockNumber--;
             EffectCreate();
             Destroy(gameObject);
+            brokeBlockNumber--;
+            Debug.Log(brokeBlockNumber);
             sceneManager.DestroyBlocks();
         }
         else
@@ -53,7 +56,14 @@ public class Blocks : MonoBehaviour
     }
     public void BlockViewChange()
     {
-        this.GetComponent<SpriteRenderer>().sprite = blockViews[hitNumber - 1];
+        try
+        {
+            this.GetComponent<SpriteRenderer>().sprite = blockViews[hitNumber - 1];
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogException(ex);
+        }
     }
     public void NextScene()
     {

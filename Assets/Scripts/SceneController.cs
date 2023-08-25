@@ -47,6 +47,7 @@ public class SceneController : MonoBehaviour
     {
         if (Blocks.brokeBlockNumber <= 0)
         {
+            Debug.Log("destroy blocks çalýþtý");
             NextScene();
         }
     }
