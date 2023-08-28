@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Bar
   - Broke
+  - Win
   layers:
   - Default
   - TransparentFX

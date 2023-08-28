@@ -21,18 +21,34 @@ public class ballController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 isStartGame = true;
-                this.GetComponent<Rigidbody2D>().velocity = new Vector3(3f, 9f, 0f);
+                if (gameObject.transform.position.x >= 0)
+                {
+                    this.GetComponent<Rigidbody2D>().velocity = new Vector3(-3f, -9f, 0f);
+                }
+                else if(gameObject.transform.position.x < 0)
+                {
+                    this.GetComponent<Rigidbody2D>().velocity = new Vector3(3f, 9f, 0f);
+                }
             }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 tinyDeviation = new Vector2(Random.Range(0f, 0.4f), Random.Range(0f, 0.4f));
+        if(gameObject.transform.position.x >= 0)
+        {
+            Vector2 tinyDeviation = new Vector2(Random.Range(-1f, 0f), Random.Range(-1f, 0f));
+            GetComponent<Rigidbody2D>().velocity += tinyDeviation;
+        }
+        else if(gameObject.transform.position.x < 0)
+        {
+            Vector2 tinyDeviation = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
+            GetComponent<Rigidbody2D>().velocity += tinyDeviation;
+        }
         //Debug.Log(tinyDeviation);
         if (isStartGame)
         {
             GetComponent<AudioSource>().Play();
-            GetComponent<Rigidbody2D>().velocity += tinyDeviation;
+            //GetComponent<Rigidbody2D>().velocity += tinyDeviation;
         }
     }
 }
